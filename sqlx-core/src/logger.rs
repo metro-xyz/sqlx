@@ -82,7 +82,7 @@ impl<'q> QueryLogger<'q> {
                 resource.name = trimmed_query.as_str(),
                 "span.type" = "db",
                 span.kind = "client",
-                service = "sqlx",
+                service.name = "sqlx",
                 db.system = "postgres",
                 db.operation = trimmed_query.as_str(),
                 db.row_count = tracing::field::Empty,
